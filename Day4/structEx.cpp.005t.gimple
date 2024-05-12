@@ -1,0 +1,405 @@
+main ()
+{
+  struct Employee * retval.0;
+  struct Employee * D.36340;
+  struct Employee * D.36341;
+  long int D.36342;
+  int D.40156;
+
+  {
+    struct Employee arr[5];
+
+    try
+      {
+        D.36340 = &arr;
+        D.36341 = D.36340;
+        D.36342 = 4;
+        try
+          {
+            <D.40141>:
+            if (D.36342 < 0) goto <D.36397>; else goto <D.40142>;
+            <D.40142>:
+            Employee::Employee (D.36341);
+            D.36341 = D.36341 + 48;
+            D.36342 = D.36342 + -1;
+            goto <D.40141>;
+            <D.36397>:
+          }
+        catch
+          {
+            {
+              struct Employee * D.36375;
+
+              if (D.36340 != 0B) goto <D.40143>; else goto <D.40144>;
+              <D.40143>:
+              _1 = 4 - D.36342;
+              _2 = (sizetype) _1;
+              _3 = _2 * 48;
+              D.36375 = D.36340 + _3;
+              <D.40145>:
+              if (D.36375 == D.36340) goto <D.40146>; else goto <D.40147>;
+              <D.40147>:
+              D.36375 = D.36375 + 18446744073709551568;
+              Employee::~Employee (D.36375);
+              goto <D.40145>;
+              <D.40146>:
+              goto <D.40148>;
+              <D.40144>:
+              <D.40148>:
+            }
+          }
+        retval.0 = D.36340;
+        try
+          {
+            {
+              int i;
+
+              i = 0;
+              <D.40149>:
+              if (i > 4) goto <D.36399>; else goto <D.40150>;
+              <D.40150>:
+              _4 = &arr[i];
+              Employee::getDetails (_4);
+              i = i + 1;
+              goto <D.40149>;
+              <D.36399>:
+            }
+            {
+              int i;
+
+              i = 0;
+              <D.40151>:
+              if (i > 4) goto <D.36401>; else goto <D.40152>;
+              <D.40152>:
+              _5 = &arr[i];
+              Employee::printDetails (_5);
+              i = i + 1;
+              goto <D.40151>;
+              <D.36401>:
+            }
+          }
+        finally
+          {
+            {
+              struct Employee * D.36392;
+
+              D.36392 = &arr + 240;
+              <D.40153>:
+              if (&arr == D.36392) goto <D.40154>; else goto <D.40155>;
+              <D.40155>:
+              D.36392 = D.36392 + 18446744073709551568;
+              Employee::~Employee (D.36392);
+              goto <D.40153>;
+              <D.40154>:
+            }
+          }
+      }
+    finally
+      {
+        arr = {CLOBBER};
+      }
+  }
+  D.40156 = 0;
+  return D.40156;
+}
+
+
+Employee::Employee (struct Employee * const this)
+{
+  _1 = &this->name;
+  std::__cxx11::basic_string<char>::basic_string (_1);
+  try
+    {
+
+    }
+  catch
+    {
+      _2 = &this->name;
+      std::__cxx11::basic_string<char>::~basic_string (_2);
+    }
+}
+
+
+std::__cxx11::basic_string<char>::basic_string (struct basic_string * const this)
+{
+  struct allocator D.38337;
+
+  try
+    {
+      MEM[(struct  &)this] = {CLOBBER};
+      {
+        _1 = &this->_M_dataplus;
+        std::allocator<char>::allocator (&D.38337);
+        try
+          {
+            try
+              {
+                _2 = std::__cxx11::basic_string<char>::_M_local_data (this);
+                std::__cxx11::basic_string<char>::_Alloc_hider::_Alloc_hider (_1, _2, &D.38337);
+              }
+            finally
+              {
+                std::allocator<char>::~allocator (&D.38337);
+              }
+          }
+        finally
+          {
+            D.38337 = {CLOBBER};
+          }
+        try
+          {
+            std::__cxx11::basic_string<char>::_M_set_length (this, 0);
+          }
+        catch
+          {
+            _3 = &this->_M_dataplus;
+            std::__cxx11::basic_string<char>::_Alloc_hider::~_Alloc_hider (_3);
+          }
+      }
+    }
+  catch
+    {
+      <<<eh_must_not_throw (terminate)>>>
+    }
+}
+
+
+std::allocator<char>::allocator (struct allocator * const this)
+{
+  try
+    {
+      {
+        __gnu_cxx::new_allocator<char>::new_allocator (this);
+        try
+          {
+
+          }
+        catch
+          {
+            __gnu_cxx::new_allocator<char>::~new_allocator (this);
+          }
+      }
+    }
+  catch
+    {
+      <<<eh_must_not_throw (terminate)>>>
+    }
+}
+
+
+__gnu_cxx::new_allocator<char>::new_allocator (struct new_allocator * const this)
+{
+  try
+    {
+      {
+
+      }
+    }
+  catch
+    {
+      <<<eh_must_not_throw (terminate)>>>
+    }
+}
+
+
+std::__cxx11::basic_string<char>::_Alloc_hider::_Alloc_hider (struct _Alloc_hider * const this, char * __dat, struct allocator & __a)
+{
+  MEM[(struct  &)this] = {CLOBBER};
+  {
+    _1 = std::move<std::allocator<char>&> (__a);
+    std::allocator<char>::allocator (this, _1);
+    try
+      {
+        this->_M_p = __dat;
+      }
+    catch
+      {
+        std::allocator<char>::~allocator (this);
+      }
+  }
+}
+
+
+std::move<std::allocator<char>&> (struct allocator & __t)
+{
+  struct type & D.40165;
+
+  try
+    {
+      D.40165 = __t;
+      return D.40165;
+    }
+  catch
+    {
+      <<<eh_must_not_throw (terminate)>>>
+    }
+}
+
+
+std::allocator<char>::~allocator (struct allocator * const this)
+{
+  try
+    {
+      {
+        try
+          {
+
+          }
+        finally
+          {
+            __gnu_cxx::new_allocator<char>::~new_allocator (this);
+          }
+      }
+      <D.38044>:
+    }
+  catch
+    {
+      <<<eh_must_not_throw (terminate)>>>
+    }
+}
+
+
+__gnu_cxx::new_allocator<char>::~new_allocator (struct new_allocator * const this)
+{
+  try
+    {
+      {
+
+      }
+      <D.38451>:
+    }
+  catch
+    {
+      <<<eh_must_not_throw (terminate)>>>
+    }
+}
+
+
+Employee::~Employee (struct Employee * const this)
+{
+  {
+    try
+      {
+        try
+          {
+
+          }
+        finally
+          {
+            _1 = &this->name;
+            std::__cxx11::basic_string<char>::~basic_string (_1);
+          }
+      }
+    finally
+      {
+        MEM[(struct  &)this] = {CLOBBER};
+      }
+  }
+  <D.36389>:
+}
+
+
+std::__cxx11::basic_string<char>::~basic_string (struct basic_string * const this)
+{
+  try
+    {
+      {
+        try
+          {
+            try
+              {
+                std::__cxx11::basic_string<char>::_M_dispose (this);
+              }
+            finally
+              {
+                _1 = &this->_M_dataplus;
+                std::__cxx11::basic_string<char>::_Alloc_hider::~_Alloc_hider (_1);
+              }
+          }
+        finally
+          {
+            MEM[(struct  &)this] = {CLOBBER};
+          }
+      }
+      <D.37458>:
+    }
+  catch
+    {
+      <<<eh_must_not_throw (terminate)>>>
+    }
+}
+
+
+std::__cxx11::basic_string<char>::_Alloc_hider::~_Alloc_hider (struct _Alloc_hider * const this)
+{
+  {
+    try
+      {
+        try
+          {
+
+          }
+        finally
+          {
+            std::allocator<char>::~allocator (this);
+          }
+      }
+    finally
+      {
+        MEM[(struct  &)this] = {CLOBBER};
+      }
+  }
+  <D.37453>:
+}
+
+
+Employee::getDetails (struct Employee * const this)
+{
+  std::operator<< <std::char_traits<char> > (&cout, "Enter id, name and salary: ");
+  _1 = &this->id;
+  _2 = std::basic_istream<char>::operator>> (&cin, _1);
+  _3 = &this->name;
+  _4 = std::operator>><char, std::char_traits<char>, std::allocator<char> > (_2, _3);
+  _5 = &this->salary;
+  std::basic_istream<char>::operator>> (_4, _5);
+}
+
+
+Employee::printDetails (struct Employee * const this)
+{
+  _1 = std::operator<< <std::char_traits<char> > (&cout, "Id: ");
+  _2 = this->id;
+  _3 = std::basic_ostream<char>::operator<< (_1, _2);
+  _4 = std::operator<< <std::char_traits<char> > (_3, "\tName: ");
+  _5 = &this->name;
+  _6 = std::operator<< <char, std::char_traits<char>, std::allocator<char> > (_4, _5);
+  _7 = std::operator<< <std::char_traits<char> > (_6, "\tSalary: ");
+  _8 = this->salary;
+  _9 = std::basic_ostream<char>::operator<< (_7, _8);
+  std::basic_ostream<char>::operator<< (_9, endl);
+}
+
+
+__static_initialization_and_destruction_0 (int __initialize_p, int __priority)
+{
+  if (__initialize_p == 1) goto <D.40175>; else goto <D.40176>;
+  <D.40175>:
+  if (__priority == 65535) goto <D.40177>; else goto <D.40178>;
+  <D.40177>:
+  std::ios_base::Init::Init (&__ioinit);
+  __cxa_atexit (__dt_comp , &__ioinit, &__dso_handle);
+  goto <D.40179>;
+  <D.40178>:
+  <D.40179>:
+  goto <D.40180>;
+  <D.40176>:
+  <D.40180>:
+}
+
+
+_GLOBAL__sub_I_main ()
+{
+  __static_initialization_and_destruction_0 (1, 65535);
+}
+
+
