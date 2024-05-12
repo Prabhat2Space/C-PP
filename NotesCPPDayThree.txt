@@ -1,0 +1,143 @@
+Day 3:
+======
+	Different types of members in a class
+		Data Members:
+		-------------
+			Class Member: 
+				one copy per class ---> using static keyword
+			
+			Object/Instance/variable Member:
+				Each object has its own copy 
+					normal data members without any keyword
+					const data members using const keyword
+					mutable data members using mutable keyword
+					
+			Let me give you an example
+					Example: class Employee
+
+
+Now Try This....
+		
+		class Array{
+			int arr[SIZE];
+			const int size;
+		public:
+			Array(int = 0);
+			Array(int sz, int first);
+			
+			void fillArray(int first);
+			void printArray();
+		};
+		
+		
+After this :
+------------
+	const member functions	and const objects 
+	mutable and static members
+		static members of a class are referred to class members 
+		One copy Per class 
+		Static member functions can access only static data members of the class 
+		Static member functions cannot access instance members 
+
+		Syntax:	
+			static returnType funName(arguments){
+			
+			}
+			
+		
+	dynamic memory allocation in C++	
+		Heap based objects/variables allocated dynamically 
+		
+		C style:
+		--------
+			In C we used stdlib.h which has functions like malloc, calloc, realloc and free functions for allocating memory dynamically
+			
+		C++ style:
+		==========
+			Remember(always) all Valid C code is a C++ Code!. In addition to the above mentioned functions C++ provides operators new and delete for dynamic memory alocation.
+			
+				
+			C Style:
+			
+				int *iPtr = malloc(sizeof(int));
+				*iPtr = 10;
+			
+				free(iPtr); ---> For deleting / removing the memory 
+			C++ Style:
+				int *iPtr = new int(10); 
+					For storing individual elements (on data only)
+			
+				delete iPtr;
+			========================================================
+			For collections of elements:
+			C Style:
+				int size = 100;
+				 int *iPtr = malloc(sizeof(int) * size);
+				 or 
+				 int *iPtr = calloc(sizeof(int), size);
+				
+				free(iPtr);
+			C++ Style:
+				int size=100;
+				int *iPtr = new int[size];
+			
+				delete[] iPtr;
+			
+	Implement this!....		
+			
+			
+		class Array{
+			int *arr; //a pointer variable
+			const int size;
+		public:
+			Array(int = 0);
+			Array(int sz, int first);
+			
+			void fillArray(int first);
+			void printArray();
+		};
+		
+		For any Class in C++, 
+		
+			your compiler provides necessary sytax support for 
+				1. default object creation (Default Constructor)
+						Array obj;
+				2. Support copy sematics	(Copy Constructor)	
+						Array objB = objA;
+				3. Supports copy assignment (Assignment operator overload)
+						objB = objA;
+				4. Support basic destructors  (Destructor)
+						
+				These above functionalities are provided for every class created in C++. 
+				Your C++ compiler generates constructors and destructor IF NECESSARY(when is this case considered). 
+	Reading on this...			
+				Deep Copy and Shallow Copy...
+				=============================
+					We will have discussion tomorrow
+					
+					
+					
+				
+				
+				
+					
+		
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+		
+		
+		
+		
+	Introduction to Operator overloading 

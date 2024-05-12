@@ -1,0 +1,93 @@
+Day 2:
+------
+Structures Continued...
+	C Style structures 
+	C Style structures  using reference variables 
+	C++ Style structures by bringing data and functions together
+	
+
+1. Using arrays 
+		class Array{
+			int arr[SIZE];
+			int size;
+		public:
+			void initializeArr();
+			void fillArray(int first);
+			void printArray();
+		};
+		
+2. Using Linked List
+		
+		struct Node{
+			int data;
+			Node *next;
+		};
+		
+		class LinkedList{
+			Node *first;
+		public:
+			void initialize();
+			void addAtBeg();
+			void addAtEnd();
+			void addAtPos(int);
+			void disp();
+		};
+		
+	////////////////////////////////////////////////////////
+	There are special functions that can be used for initialization and de-initialization called as constructors and destructor
+	
+	Constructors:
+	-------------
+		Constructors are special functions which are automatically called when an object/variable/instance of a class is created
+		
+		These constructors can take argument, because it takes arguments the signature of these functions can vary (That means) these functions can be overloaded
+		
+		Destructor is a special function which gets called automatically when the scope of the variable/instance is gone.
+
+		Destructor does not take any arguments, so it cannot be overloaded in a class 
+
+	What is special about constructors:
+	===================================
+		There are 3 points that make constructors special
+			1. Same name as class name 
+			2. It does not have any return value (not even void)
+			3. The are automatically called. 
+			
+		Destructor:
+		-----------
+			1. name starts with ~ClassName 
+			2. no return types 
+			3. automatically called 
+
+
+			
+			
+
+
+			
+		
+		
+		
+		
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+
+
+	

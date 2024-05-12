@@ -1,0 +1,72 @@
+	Deep Copy and Shallow Copy...
+	=============================
+	
+Implement...
+		
+		struct Node{
+			int data;
+			Node *next;
+			Node(int x=0);
+		};
+		
+		class LinkedList{
+			Node *first;
+		public:
+			LinkedList();
+			~LinkedList();
+			
+			void addAtBeg();
+			void addAtEnd();
+			void addAtPos(int);
+			void disp();
+		};
+
+	
+Next:
+-----		
+	this pointer		
+	
+	friend functions and classes 	
+		
+	
+	Operator Overloading...
+	
+		Introduction 
+		Syntax
+			unary operators 
+			binary operators
+	
+		Try overloading ++ operator...
+			--> For pre-fix notation 
+					Test& operator++(){ //pre-fix
+					
+					}
+
+			--> for post-fix notation
+			
+					Test operator++(int){ //post-fix dummy integer to tell compiler its post-fix..
+					
+					}
+					
+				int main(){
+					Test a, b = 10, c;
+					
+					a = ++b;
+					a.print();
+					b.print();
+					
+					c = b++;
+					c.print();
+					b.print();
+				}
+============================================================				
+	For Tomorrow:
+		Inheritance
+		Polyporphism
+		
+		
+		
+		
+		
+				
+	

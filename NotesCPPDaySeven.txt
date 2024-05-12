@@ -1,0 +1,32 @@
+	Exception Saftey classes/object...			
+	Built in exception classes 
+		There are two main categories of exception classes in C++:
+		
+		Logic errors:
+			are errors that can be detected by reading the code. For example, trying to divide by zero is a logic error.
+		Runtime errors:
+			are errors that cannot be detected by reading the code. For example, trying to open a file that does not exist is a runtime error.
+			
+The following table shows some of the most common exception classes in C++:
+		
+Class					Description
+=======================================================
+std::logic_error		Base class for all logic errors.
+std::domain_error		Thrown when an invalid argument is passed to a function.
+std::invalid_argument	Thrown when an invalid argument is passed to a function.
+std::length_error		Thrown when an attempt is made to access an element of an array that is out of bounds.
+std::out_of_range		Thrown when an attempt is made to access an element of an array that is out of bounds.
+std::runtime_error		Base class for all runtime errors.
+std::range_error		Thrown when an attempt is made to access an element of an array that is out of bounds.
+std::overflow_error		Thrown when an attempt is made to perform an arithmetic operation that results in an overflow.
+std::underflow_error	Thrown when an attempt is made to perform an arithmetic operation that results in an underflow.
+
+	
+	user defined exceptions
+		hierarchy of user define exception classes 
+	
+	
+	IO Streams
+	
+	
+	Templates and STL

@@ -1,0 +1,73 @@
+Intro to C++
+=============
+	History
+		Different standards in C++
+		
+	Introduction to OOP
+		Abstraction
+		Encapsulation
+		Inheritance
+		Polymorphism
+		
+			you can save using 
+				.C 
+				.cc 
+				.cpp 
+				
+				
+		Function Overloading:
+		=====================
+			Two or more functions with same name, but different signature
+			What is signature of a function?
+				The name, number of arguments and type of arguments, order in which arguments that are passed.
+				
+				
+			In order to support function overloading your compiler performs name mangling/decoration during compilation (Phase I)	
+			
+			for Example:
+			============
+				void fun(); ---> _Z3funv
+				
+				void fun(int); --> _Z3funi
+				void fun(double); -->_Z3fund
+				void fun(char *);
+				void fun(string);
+				void fun(float);
+				void fun(char);
+				
+				void fun(int,int);
+				void fun(double, double);
+				void fun(int,double);
+				void fun(double, int);
+=====================================================		
+
+		In C language you used...
+			char str[] ="String here " // can be used as read and writable 
+			char *str = "string stored like this" //should be used as read only
+		In C++ in addition to above 
+			we can use 
+				string str = "Some C++ strings here"
+					here string is a class part of standard C++ library
+		fun(str);
+		void fun(char *str){
+		
+		}
+		
+		fun("Fun should not be called like this");
+		
+		char str[] = "Some more string here";
+		fun(str);
+		
+		
+		cin>>var;
+		cin.getline(str,100)
+		
+		
+		Write a structure...
+			id, name and salary
+			
+			create an array of structure variable for storing 5 Employee details
+			write functions to accept Employee details and to print it.
+				acceptDetails()
+				printDetails()
+
